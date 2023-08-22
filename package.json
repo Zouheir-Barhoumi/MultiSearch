@@ -1,15 +1,41 @@
 {
-  "name": "link_opener",
+  "name": "multi_search",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Electron-based GUI tool to open multiple search queries in different web browsers and search engines",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "build": {
+    "appId": "app.netlify.envisiontech.multisearch",
+    "productName": "MultiSearch GUI",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": "deb"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "keywords": [
+    "electron",
+    "search",
+    "browsers",
+    "search queries"
+  ],
+  "homepage": "https://github.com/Zouheir-Barhoumi/MultiSearch",
+  "url": "https://github.com/Zouheir-Barhoumi/MultiSearch/issues",
+  "email": "envisiontech.info@gmail.com",
+  "license": "MIT",
+  "author": {
+    "name": "Zouheir Barhoumi",
+    "email": "envisiontech.info@gmail.com"
+  },
   "devDependencies": {
-    "electron": "^26.0.0"
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.3"
   }
 }

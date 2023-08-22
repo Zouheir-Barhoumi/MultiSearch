@@ -3,12 +3,12 @@ const { exec } = require("child_process");
 const path = require("path");
 
 process.env.NODE_ENV = "production";
-
 const isDev = process.env.NODE_ENV !== "production";
+const width = process.env.NODE_ENV !== "production" ? 800 : 500;
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 500,
+    width: width,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
@@ -42,9 +42,11 @@ app.on("window-all-closed", function () {
 ipcMain.on("start-search", (event, data) => {
   const searchEngines = {
     google: "https://www.google.com/search?q=",
-    duck: "https://www.duckduckgo.com/?q=",
+    duckduckgo: "https://www.duckduckgo.com/?q=",
   };
-  const baseUrl = searchEngines.google;
+  const sE = data.selectedEngine;
+
+  const baseUrl = searchEngines[sE];
 
   const browsers = {
     brave: "/usr/bin/brave-browser-stable",
