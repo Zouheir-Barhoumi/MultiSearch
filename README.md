@@ -22,6 +22,8 @@ The Search Query GUI is a desktop application built using Electron that allows y
 5. Select a search engine from the dropdown menu.
 6. Enter your search queries in the text area separated by commas or on differnt lines.
 7. Click the "Search" button to open the search queries in the selected browser and search engine.
+   
+Download MultiSearch as debian package here: https://envisiontech.netlify.app/multi_search_1.0.0_amd64.deb
 
 ## Technologies Used
 
